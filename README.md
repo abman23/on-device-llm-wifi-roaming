@@ -1,5 +1,5 @@
-# Context-Aware Handover with On-Device LLM
-This is the official repository of our paper "Context-Aware Handover with On-Device LLM".
+# On-Device LLM for Context-Aware Wi-Fi Roaming
+This is the official repository of our paper "On-Device LLM for Context-Aware Wi-Fi Roaming".
 
 ![CHO demo clip](images/CHO_animation.gif)
 ## Overview
