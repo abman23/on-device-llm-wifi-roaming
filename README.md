@@ -83,3 +83,7 @@ For the local deployment of fine-tuned LLM in Ollama, please refer to this [tuto
   year    = {2025}
 }
 ```
+
+
+## Contributors
+Special thanks to Yanqing Lu for framework design and simulations.
