@@ -21,7 +21,6 @@ This is the official repository for the paper **“On-Device LLM for Context-Awa
   </tr>
 </table>
 
-![CHO demo clip](images/CHO_animation.gif)
 
 ## Overview
 
