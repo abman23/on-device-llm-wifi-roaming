@@ -1,60 +1,86 @@
 # On-Device LLM for Context-Aware Wi-Fi Roaming
-This is the official repository of our paper "On-Device LLM for Context-Aware Wi-Fi Roaming".
+[![arXiv](https://img.shields.io/badge/arXiv-2505.04174-b31b1b.svg)](https://arxiv.org/abs/2505.04174)
+
+This is the official repository for the paper **“On-Device LLM for Context-Aware Wi-Fi Roaming”** (arXiv:2505.04174, 2025).
+
+## Demo Videos
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://www.youtube.com/watch?v=U9QFzw7fJMQ">
+        <img src="https://img.youtube.com/vi/U9QFzw7fJMQ/0.jpg" width="280"><br>
+        Indoor Campus Demo
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://www.youtube.com/watch?v=UR13hyJkE8k">
+        <img src="https://img.youtube.com/vi/UR13hyJkE8k/0.jpg" width="280"><br>
+        Outdoor Street Demo
+      </a>
+    </td>
+  </tr>
+</table>
 
 ![CHO demo clip](images/CHO_animation.gif)
+
 ## Overview
 
-Context-aware Handover (CHO) is a Large Language Model (LLM)-based framework for improved WLAN handover decisions. By leveraging the strong pattern recognization capability of LLM and the rich contextual information of WLAN, CHO outperforms several traditional rule-based methods in the sense of achieving a balance between handover frequency and signal strength.
+We propose a novel cross-layer framework using an on-device Large Language Model (LLM) for context-aware Wi-Fi roaming. This approach integrates high-level reasoning in the application layer with real-time action at the PHY/MAC layers. Specifically, our LLM handles two critical roaming tasks: (1) context-driven AP selection leveraging environmental context (e.g., location, time), and (2) adaptive roaming threshold adjustments. Optimized for practical edge deployment—demonstrated effectively on consumer-grade hardware like a MacBook Pro—via quantization and efficient fine-tuning, our framework significantly enhances roaming decisions, balancing handover stability and signal quality.
 
 ## Highlights
 
-- We introduce a novel LLM-based framework for *adaptive handover* based on the contextual information, which strikes a balance between handover frequency and signal strength.
-- We include the *inference scripts* for both two tasks in the paper: (1) context-aware AP choice, (2) online roaming optimization.
-- We release a *Wi-Fi roaming dataset* collected from real-world environments, which can be used for model training and evaluation in related tasks.
+- **Cross-layer control**: First demonstration of an on-device LLM performing real-time PHY/MAC layer actions based on application-layer context reasoning.
+- **Adaptive and efficient**: Utilizes prompt engineering, parameter-efficient fine-tuning (LoRA), and quantization to achieve fast inference suitable for edge hardware, including consumer devices like MacBook Pro.
+- **Real-world validation**: Evaluated comprehensively with indoor and outdoor Wi-Fi datasets, outperforming conventional heuristic and DRL methods.
 
-## Preparation
+## Quick Start
 
-1. **Clone the Repository**
+### 1. Clone
    ```sh
-   git clone https://github.com/abman23/llm-handover.git
+   git clone https://github.com/abman23/on-device-llm-wifi-roaming.git
    ```
 
-2. **Download the dataset**
-- Download the dataset from [here](https://drive.google.com/file/d/1U-xHQc8mTHOiScTuVzCZL8ju1XM_3OUU/view?usp=drive_link).
-- Extract the ZIP archive to the `data/` directory.
+### 2. Dataset
+1. Download from https://drive.google.com/file/d/1U-xHQc8mTHOiScTuVzCZL8ju1XM_3OUU
+2. Unzip into data/
 
-2. **Set up the Virtual Environment**
+### 3. Environment**
    ```sh
    conda create -n cho_env python=3.10.14
    conda activate cho_env
    pip install -r requirements.txt
    ```
 
-3. **Deploy LLMs Locally**
-- Install and launch [Ollama](https://ollama.com/).
+### 4. **Local LLM**
+1. Install and launch [Ollama](https://ollama.com/).
 - Create a local LLM in Ollama.
     ```sh
     ollama pull llama3.2:1b-instruct-q2_K
     ```
   You can replace `llama3.2:1b-instruct-q2_K` by any other model hosted by [Ollama](https://ollama.com/search), and then modify the arguments in the following inference scripts.
   
-## Usage
+### 5. Usage
 
 ### LLM inference
 For task (1) context-aware AP choice:
-```sh
-python inference_task1.py --thr -70 --data hybrid_2.json --model llama3.2:1b-instruct-q2_K
-```
+   ```sh
+   python inference_task1.py --thr -70 --data hybrid_2.json --model llama3.2:1b-instruct-q2_K
+   ```
 For task (2) online roaming optimization:
-```sh
-python inference_task2.py --thr -60 -70 -80 --data hybrid_2.json --interval 30 --model llama3.2:1b-instruct-q2_K
-```
+   ```sh
+   python inference_task2.py --thr -60 -70 -80 --data hybrid_2.json --interval 30 --model llama3.2:1b-instruct-q2_K
+   ```
 
-### Test your own model
+### Fine-Tune & Evaluate Your Own Model
 You can fine-tune your own model and test it out under our CHO setting.
 For the local deployment of fine-tuned LLM in Ollama, please refer to this [tutorial](https://github.com/ollama/ollama/blob/main/docs/import.md).
 
 ## Citation
 ```
-
+@article{lee2025device,
+  title   = {On-Device LLM for Context-Aware Wi-Fi Roaming},
+  author  = {Lee, Ju-Hyung and Lu, Yanqing},
+  journal = {arXiv preprint arXiv:2505.04174},
+  year    = {2025}
+}
 ```
