@@ -9,13 +9,13 @@ This is the official repository for the paper **“On-Device LLM for Context-Awa
     <td align="center">
       <a href="https://www.youtube.com/watch?v=U9QFzw7fJMQ">
         <img src="https://img.youtube.com/vi/U9QFzw7fJMQ/0.jpg" width="280"><br>
-        Indoor Campus Demo
+        Outdoor Campus Demo
       </a>
     </td>
     <td align="center">
       <a href="https://www.youtube.com/watch?v=UR13hyJkE8k">
         <img src="https://img.youtube.com/vi/UR13hyJkE8k/0.jpg" width="280"><br>
-        Outdoor Street Demo
+        Indoor Street Demo
       </a>
     </td>
   </tr>
