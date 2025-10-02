@@ -1,7 +1,7 @@
 # On-Device LLM for Context-Aware Wi-Fi Roaming
 [![arXiv](https://img.shields.io/badge/arXiv-2505.04174-b31b1b.svg)](https://arxiv.org/abs/2505.04174)
 
-This is the official repository for the paper **“On-Device LLM for Context-Aware Wi-Fi Roaming”** (arXiv:2505.04174, 2025).
+This is the official repository for the paper **“On-Device LLM for Context-Aware Wi-Fi Roaming”** accepted at **ICML'25 (ML4Wireless Workshop)** (arXiv:2505.04174, 2025).
 
 ## Demo Videos
 <table>
@@ -21,16 +21,15 @@ This is the official repository for the paper **“On-Device LLM for Context-Awa
   </tr>
 </table>
 
-
-## Overview
-
-We propose a novel cross-layer framework using an on-device Large Language Model (LLM) for context-aware Wi-Fi roaming. This approach integrates high-level reasoning in the application layer with real-time action at the PHY/MAC layers. Specifically, our LLM handles two critical roaming tasks: (1) context-driven AP selection leveraging environmental context (e.g., location, time), and (2) adaptive roaming threshold adjustments. Optimized for practical edge deployment—demonstrated effectively on consumer-grade hardware like a MacBook Pro—via quantization and efficient fine-tuning, our framework significantly enhances roaming decisions, balancing handover stability and signal quality.
-
 ## Highlights
 
 - **Cross-layer control**: First demonstration of an on-device LLM performing real-time PHY/MAC layer actions based on application-layer context reasoning.
 - **Adaptive and efficient**: Utilizes prompt engineering, parameter-efficient fine-tuning (LoRA), and quantization to achieve fast inference suitable for edge hardware, including consumer devices like MacBook Pro.
 - **Real-world validation**: Evaluated comprehensively with indoor and outdoor Wi-Fi datasets, outperforming conventional heuristic and DRL methods.
+
+## Overview
+
+We propose a novel cross-layer framework using an on-device Large Language Model (LLM) for context-aware Wi-Fi roaming. This approach integrates high-level reasoning in the application layer with real-time action at the PHY/MAC layers. Specifically, our LLM handles two critical roaming tasks: (1) context-driven AP selection leveraging environmental context (e.g., location, time), and (2) adaptive roaming threshold adjustments. Optimized for practical edge deployment—demonstrated effectively on consumer-grade hardware like a MacBook Pro—via quantization and efficient fine-tuning, our framework significantly enhances roaming decisions, balancing handover stability and signal quality.
 
 ## Quick Start
 
