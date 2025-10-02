@@ -1,7 +1,7 @@
 # On-Device LLM for Context-Aware Wi-Fi Roaming
 [![arXiv](https://img.shields.io/badge/arXiv-2505.04174-b31b1b.svg)](https://arxiv.org/abs/2505.04174)
 
-This is the official repository for the paper **“On-Device LLM for Context-Aware Wi-Fi Roaming”** accepted at **ICML'25 (ML4Wireless Workshop)** (arXiv:2505.04174, 2025).
+This is the official repository for the paper **“On-Device LLM for Context-Aware Wi-Fi Roaming”** presented at **ICML'25 (ML4Wireless Workshop)** (arXiv:2505.04174, 2025).
 
 ## Demo Videos
 <table>
